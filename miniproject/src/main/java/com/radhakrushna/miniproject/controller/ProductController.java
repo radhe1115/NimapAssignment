@@ -21,7 +21,7 @@ public class ProductController {
 
     @GetMapping
     public Page<Product> getAllProducts(@RequestParam(defaultValue = "0") int page,
-                                        @RequestParam(defaultValue = "10") int size) {
+                                        @RequestParam(defaultValue = "5") int size) {
         return productService.getAllProducts(PageRequest.of(page, size));
     }
 
